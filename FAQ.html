@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Hijau - Join the Movement!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+
+        /* ini bootstrap */
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/faqs/faq-3/assets/css/faq-3.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="./scripts.js"></script>
+
+</head>
+
+<body>
+    <section id="main">
+        <div class="blur">
+            <div class="logo-holder">
+                <img src="assets/logo.png" alt="Project Hijau">
+            </div>
+            <div class="header-holder">
+                <ul id="header">
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about-us">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Project</a>
+                    </li>
+                    <li>
+                        <a href="#progress">Donation</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="title-holder">
+                <h1>JOIN THE<br />MOVEMENT</h1>
+            </div>
+            <div class="description-holder">
+                <p>We are helping you to plant trees and save the environment. Join us and make the world a better
+                    place.
+                </p>
+            </div>
+            <div class="cta-holder">
+                <button onclick="showModal('donate')">DONATE NOW</button>
+            </div>
+        </div>
+    </section>
+
+    /* <!-- FAQ 3 - Bootstrap Brain Component --> */
+<section class="bsb-faq-3 py-3 py-md-5 py-xl-8">
+<!-- FAQs: FAQ -->
+<div class="mb-8">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-11 col-xl-10">
+        <div class="d-flex align-items-end mb-5">
+          <h3 class="m-0">FAQ - Project Hijau</h3>
+        </div>
+      </div>
+      <div class="col-11 col-xl-10">
+        <div class="accordion accordion-flush" id="faqAccount">
+          <div class="accordion-item bg-transparent border-top border-bottom py-3">
+            <h2 class="accordion-header" id="faqAccountHeading1">
+              <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse1" aria-expanded="false" aria-controls="faqAccountCollapse1">
+                Apa itu Project Hijau ? 
+              </button>
+            </h2>
+            <div id="faqAccountCollapse1" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading1">
+              <div class="accordion-body">
+                <p>Project Hijau adalah platform crowdfunding yang didedikasikan untuk mendukung inisiatif penanaman pohon yang bertujuan memerangi perubahan iklim, 
+                meningkatkan keanekaragaman hayati, dan mempromosikan keberlanjutan lingkungan. 
+                Melalui donasi komunitas, kami mendanai penanaman pohon asli di area yang telah terdeforestasi dan terdegradasi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-transparent border-bottom py-3">
+            <h2 class="accordion-header" id="faqAccountHeading2">
+              <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse2" aria-expanded="false" aria-controls="faqAccountCollapse2">
+              Siapa yang dapat membuat daftar proyek di Project Hijau?
+              </button>
+            </h2>
+            <div id="faqAccountCollapse2" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading2">
+              <div class="accordion-body">
+                <p>Hanya kami yang dapat membuat daftar proyek. Ini memastikan bahwa semua proyek memiliki kredibilitas, 
+                dikelola dengan baik, dan sejalan dengan misi Project Hijau.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-transparent border-bottom py-3">
+            <h2 class="accordion-header" id="faqAccountHeading3">
+              <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse3" aria-expanded="false" aria-controls="faqAccountCollapse3">
+              Bagaimana cara saya mendonasikan ke sebuah proyek?
+              </button>
+            </h2>
+            <div id="faqAccountCollapse3" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading3">
+              <div class="accordion-body">
+                <p>Untuk mendonasikan, pilih proyek yang ingin Anda dukung dari halaman daftar proyek. Klik tombol "Donasi" dan pilih jumlah donasi yang Anda inginkan.
+                 Anda dapat melakukan donasi sekali atau mengatur kontribusi berulang menggunakan kartu kredit/debit, transfer bank, atau e-wallet populer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-transparent border-bottom py-3">
+            <h2 class="accordion-header" id="faqAccountHeading4">
+              <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse4" aria-expanded="false" aria-controls="faqAccountCollapse4">
+              Bagaimana saya bisa mengetahui perkembangan proyek yang saya donasikan?
+              </button>
+            </h2>
+            <div id="faqAccountCollapse4" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading4">
+              <div class="accordion-body">
+                <p>Pembuat proyek memberikan pembaruan reguler tentang status proyek mereka melalui laporan kemajuan yang komprehensif. Laporan ini mencakup metrik terperinci seperti total jumlah pohon yang ditanam, tingkat kelangsungan hidup, 
+                dan dampak lingkungan lainnya. Pembaruan visual dengan foto dan video juga dibagikan untuk menggambarkan upaya yang sedang berlangsung.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item bg-transparent border-bottom py-3">
+            <h2 class="accordion-header" id="faqAccountHeading5">
+              <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse5" aria-expanded="false" aria-controls="faqAccountCollapse5">
+              Bisakah saya membagikan pembaruan proyek di media sosial?
+              </button>
+            </h2>
+            <div id="faqAccountCollapse5" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading5">
+              <div class="accordion-body">
+                <p>Ya, platform kami mendukung integrasi dengan media sosial. Pengguna dapat dengan mudah membagikan donasi dan pembaruan proyek mereka di berbagai platform media sosial untuk meningkatkan kesadaran dan keterlibatan.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item bg-transparent border-bottom py-3">
+            <h2 class="accordion-header" id="faqAccountHeading6">
+              <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse6" aria-expanded="false" aria-controls="faqAccountCollapse5">
+              Apa yang terjadi jika sebuah proyek tidak mencapai target dananya?
+              </button>
+            </h2>
+            <div id="faqAccountCollapse6" class="accordion-collapse collapse" aria-labelledby="faqAccountHeadin65">
+              <div class="accordion-body">
+                <p>Jika sebuah proyek tidak mencapai target dananya, dana yang terkumpul masih dapat digunakan untuk mendukung pelaksanaan parsial proyek tersebut, 
+                tergantung pada kebijakan organisasi dan kelayakan proyek tersebut. Donatur akan diberitahu tentang perubahan atau penyesuaian lingkup proyek.</p>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+   /* <!-- FAQ 3 -Pohon kenapa penting --> */
+   <section class="bsb-faq-3 py-3 py-md-5 py-xl-8">
+   <!-- FAQs: FAQ -->
+   <div class="mb-8">
+     <div class="container">
+       <div class="row justify-content-center">
+         <div class="col-11 col-xl-10">
+           <div class="d-flex align-items-end mb-5">
+             <h3 class="m-0">FAQ - Mengapa Menanam Pohon itu Penting ? </h3>
+           </div>
+         </div>
+         <div class="col-11 col-xl-10">
+           <div class="accordion accordion-flush" id="faqAccount">
+             <div class="accordion-item bg-transparent border-top border-bottom py-3">
+               <h2 class="accordion-header" id="faqAccountHeading1">
+                 <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse1" aria-expanded="false" aria-controls="faqAccountCollapse1">
+                 Mengapa penting menanam pohon?
+                 </button>
+               </h2>
+               <div id="faqAccountCollapse1" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading1">
+                 <div class="accordion-body">
+                   <p>Menanam pohon sangat penting karena pohon membantu menyerap karbon dioksida dari atmosfer, memproduksi oksigen, dan mengurangi 
+                   efek perubahan iklim. Selain itu, pohon juga memberikan habitat bagi banyak spesies, 
+                   mencegah erosi tanah, dan meningkatkan kualitas udara dan air.</p>
+                 </div>
+               </div>
+             </div>
+             <div class="accordion-item bg-transparent border-bottom py-3">
+               <h2 class="accordion-header" id="faqAccountHeading2">
+                 <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse2" aria-expanded="false" aria-controls="faqAccountCollapse2">
+                 Bagaimana pohon membantu mengurangi perubahan iklim?
+                 </button>
+               </h2>
+               <div id="faqAccountCollapse2" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading2">
+                 <div class="accordion-body">
+                   <p>Pohon menyerap karbon dioksida (CO2) dari atmosfer selama proses fotosintesis dan menyimpannya dalam bentuk biomassa (batang, akar, daun).
+                    Dengan demikian, pohon berperan sebagai penyerap karbon yang efektif, membantu mengurangi jumlah gas rumah kaca di atmosfer.</p>
+                 </div>
+               </div>
+             </div>
+             <div class="accordion-item bg-transparent border-bottom py-3">
+               <h2 class="accordion-header" id="faqAccountHeading3">
+                 <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse3" aria-expanded="false" aria-controls="faqAccountCollapse3">
+                 Apa manfaat ekologis dari menanam pohon?
+                 </button>
+               </h2>
+               <div id="faqAccountCollapse3" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading3">
+                 <div class="accordion-body">
+                   <p>Manfaat ekologis dari menanam pohon meliputi peningkatan keanekaragaman hayati, penyediaan habitat bagi berbagai spesies, 
+                   stabilisasi tanah, dan pencegahan erosi. Pohon juga membantu menjaga keseimbangan ekosistem dengan menyediakan makanan dan 
+                   tempat berlindung bagi hewan.</p>
+                 </div>
+               </div>
+             </div>
+             <div class="accordion-item bg-transparent border-bottom py-3">
+               <h2 class="accordion-header" id="faqAccountHeading4">
+                 <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse4" aria-expanded="false" aria-controls="faqAccountCollapse4">
+                 Bagaimana pohon dapat meningkatkan kualitas udara?
+                 </button>
+               </h2>
+               <div id="faqAccountCollapse4" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading4">
+                 <div class="accordion-body">
+                   <p>Pohon meningkatkan kualitas udara dengan menyerap polutan udara seperti ozon, nitrogen dioksida, dan sulfur dioksida 
+                   melalui daun mereka. Selain itu, pohon juga mengurangi debu dan partikel lainnya dari udara, membuat udara lebih bersih dan sehat untuk dihirup.</p>
+                 </div>
+               </div>
+             </div>
+             <div class="accordion-item bg-transparent border-bottom py-3">
+               <h2 class="accordion-header" id="faqAccountHeading5">
+                 <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse5" aria-expanded="false" aria-controls="faqAccountCollapse5">
+                 Apa peran pohon dalam menjaga kualitas air?
+                 </button>
+               </h2>
+               <div id="faqAccountCollapse5" class="accordion-collapse collapse" aria-labelledby="faqAccountHeading5">
+                 <div class="accordion-body">
+                   <p>Pohon membantu menjaga kualitas air dengan menyerap air hujan dan mengurangi limpasan permukaan yang dapat 
+                   membawa polutan ke sungai dan danau. Akar pohon juga membantu menyaring air dan mencegah erosi tanah, 
+                   menjaga kesuburan tanah dan kualitas air tanah.</p>
+                 </div>
+               </div>
+             </div>
+   
+             <div class="accordion-item bg-transparent border-bottom py-3">
+               <h2 class="accordion-header" id="faqAccountHeading6">
+                 <button class="accordion-button collapsed bg-transparent fw-bold shadow-none link-primary" type="button" data-bs-toggle="collapse" data-bs-target="#faqAccountCollapse6" aria-expanded="false" aria-controls="faqAccountCollapse5">
+                 Bagaimana pohon dapat meningkatkan nilai estetika dan ekonomi suatu area?
+                 </button>
+               </h2>
+               <div id="faqAccountCollapse6" class="accordion-collapse collapse" aria-labelledby="faqAccountHeadin65">
+                 <div class="accordion-body">
+                   <p>Pohon meningkatkan nilai estetika suatu area dengan menciptakan lingkungan yang lebih hijau dan menarik. 
+                   Secara ekonomi, pohon dapat meningkatkan nilai properti, menarik wisatawan, dan menciptakan lingkungan yang 
+                   lebih nyaman untuk bisnis dan komunitas.</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   </section>
+
+    
+    <section id="contact">
+        <div class="sub-section">
+            <div class="title-holder">
+                <h2>Contacts</h2>
+            </div>
+            <div class="description-holder">
+                <p> Interested in Our Project? Contact Us!</p>
+                <p>If you're interested in joining or learning more about our project, we'd love to hear from you.
+                    Please reach out to us at </p>
+            </div>
+            <div class="more-card-holder">
+                <button>Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="footer">
+        <div class="sub-section">
+            <div class="footer-holder">
+                <div class="footer-item valign-center">
+                    <p>We are charity organization that help you to plant trees and save the environment. Join us and
+                        make the world</p>
+                </div>
+                <div class="footer-item">
+                    <div class="title-holder">Contact Us</div>
+                    <div class="information-holder">
+                        <span>Feel free to contact and reach us!!</span>
+                        <ul>
+                            <li>
+                                <div><img src="./assets/phone.png" alt="Phone"></div>
+                                <div>+6285212344321</div>
+                            </li>
+                            <li>
+                                <div><img src="./assets/mail.png" alt="Email"></div>
+                                <div>admin@projecthijau.com</div>
+                            </li>
+                            <li>
+                                <div><img src="./assets/location.png" alt="Address"></div>
+                                <div>Jl. KH. Syahdan, No.18, Jakarta Barat, DKI Jakarta</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <div class="information-holder">
+                        <span>Subscribe our newsletter for more update & news!!</span>
+                        <div class="contact-form">
+                            <div class="input-holder">
+                                <input type="text" placeholder="Enter your email">
+                            </div>
+                            <div class="button-holder">
+                                <button>Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-footer sub-section">
+            <div>© 2024 Project Hijau. All rights reserved</div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="./location_submission.html">Locatin Submission</a>
+                    </li>
+                    <li>|</li>
+                    <li>Privacy Policy</li>
+                    <li>|</li>
+                    <li>Term & Condition</li>
+                    <li>|</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal" data-name="donate">
+        <div class="sub-section">
+            <div class="title-holder">
+                <h2>Donate</h2>
+                <h4>1 pohon = 50.0000 rupiah</h4>
+            </div>
+            <div class="button-holder">
+                <button>5 pohon</button>
+                <button>10 pohon</button>
+                <button>100 pohon</button>
+                <button>150 pohon</button>
+            </div>
+            <div class="input-holder">
+                <input type="text" placeholder="Nominal Lainnya">
+            </div>
+            <hr>
+            <div class="button-holder">
+                <button class="primary-button" onclick="showModal('authentication')">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal" data-name="authentication">
+        <div class="sub-section">
+            <div class="title-holder">
+                <br>
+                <h4>Login / Register</h4>
+            </div>
+            <div class="button-holder">
+                <button class="primary-button">Sign In</button>
+            </div>
+            <div class="button-holder">
+                <button class="secondary-button">Create Account</button>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

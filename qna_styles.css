@@ -1,0 +1,465 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body>section {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.blur {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.valign-center {
+    align-content: center;
+}
+
+#main {
+    background: url('./assets/background-01.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main .blur {
+    padding: 4em 0;
+}
+
+#main .logo-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 0;
+}
+
+#main .header-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 0;
+}
+
+#main .header-holder ul,
+#main .header-holder li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main .header-holder ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    overflow-y: auto;
+    padding: 1em 0;
+}
+
+#main .header-holder li {
+    margin: 0 1.5em;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+#main .header-holder li a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0 20px #000;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+
+#main .title-holder {
+    text-align: center;
+    font-size: 2.8em;
+    color: #fff;
+    text-shadow: 0 0 20px #000;
+    letter-spacing: 0px;
+}
+
+#main .description-holder {
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+    text-shadow: 0 0 20px #000;
+    padding: 1.5em;
+}
+
+#main .cta-holder {
+    text-align: center;
+    padding: 3em 0;
+}
+
+#main .cta-holder button {
+    border-radius: 3em;
+    border: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0.8em 2.8em;
+    color: #fff;
+    text-shadow: 0 0 20px #000;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sub-section {
+    padding: 2em 0;
+    max-width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.sub-section .title-holder {
+    text-align: center;
+}
+
+.sub-section .title-holder h2 {
+    font-size: 1.6em;
+    color: #000;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
+
+.sub-section .title-holder h4 {
+    margin-top: -0.5em;
+}
+
+.sub-section .description-holder {
+    text-align: center;
+}
+
+.card-holder {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2em 0;
+}
+
+.card-holder .card-item {
+    border-radius: 1em;
+    padding: 1em;
+    display: grid;
+    background-color: #80B133;
+}
+
+.card-holder .card-title {
+    color: #223544;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-weight: 600;
+    padding: 0.5em 0;
+}
+
+.card-holder .card-sub-title {
+    color: #0084B8;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+}
+
+.card-holder .card-picture {
+    height: 250px;
+}
+
+.card-holder .card-information {
+    text-align: center;
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.card-holder .card-description {
+    color: #636774;
+    font-size: 0.9em;
+}
+
+.more-card-holder {
+    text-align: center;
+}
+
+.more-card-holder button {
+    border-radius: 3em;
+    border: 1px solid #5D9B22;
+    background-color: #5D9B22;
+    padding: 0.8em 3em;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.photo-holder {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1em;
+}
+
+.photo-item {
+    background-color: #8BC34A;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.photo-item[data-col="2"] {
+    grid-column: span 2;
+}
+
+.photo-item[data-col="3"] {
+    grid-column: span 3;
+}
+
+.photo-item[data-col="4"] {
+    grid-column: span 4;
+}
+
+.photo-item[data-col="5"] {
+    grid-column: span 5;
+}
+
+.photo-item[data-col="6"] {
+    grid-column: span 6;
+}
+
+#contact .more-card-holder {
+    padding: 3em 0;
+}
+
+#footer {
+    color: #fff;
+    background-color: #5D9B22;
+}
+
+.footer-holder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4em;
+    padding: 2em 0;
+    font-size: 0.9em;
+}
+
+.footer-item .title-holder {
+    text-align: left;
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+.footer-item .information-holder ul {
+    list-style: none;
+    margin: 0;
+    padding: 1em 0;
+}
+
+.footer-item .information-holder li {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    padding: 0.5em 0;
+}
+
+.copyright-footer {
+    font-size: 0.8em;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1em 0;
+    align-items: center;
+}
+
+.copyright-footer>div {
+    width: 100%;
+}
+
+.copyright-footer ul {
+    box-sizing: border-box;
+    display: flex;
+    gap: 1em;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+.contact-form {
+    padding: 1em 0;
+}
+
+.contact-form .input-holder {
+    background-color: #fff;
+}
+
+.contact-form input {
+    border: 0;
+    padding: 0;
+    outline: none;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form .button-holder {
+    width: 100%;
+    padding: 1em 0;
+}
+
+.contact-form .button-holder button {
+    width: 100%;
+    border-radius: 3em;
+    border: 1px solid #fff;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0.8em 2.8em;
+    color: #fff;
+    text-shadow: 0 0 20px #000;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-items: center;
+    display: none;
+}
+
+.modal .sub-section {
+    width: 100%;
+    max-width: 380px;
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: 0.5em;
+}
+
+.modal .sub-section .button-holder {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.modal .sub-section .button-holder button {
+    background-color: #EDF2F7;
+    border: 1px solid #CBD5E0;
+    border-radius: 0.3em;
+    cursor: pointer;
+    padding: 1em;
+}
+
+.modal .sub-section hr {
+    border: 0px;
+    border-top: 1px solid #CBD5E0;
+    margin: 1.5em 0;
+}
+
+.modal .sub-section .button-holder .primary-button {
+    grid-column: span 2;
+    background-color: #588CD0;
+    border: 1px solid #588CD0;
+    color: #fff;
+    border-radius: 4em;
+    cursor: pointer;
+}
+
+.modal .sub-section .button-holder .secondary-button {
+    grid-column: span 2;
+    background-color: #fff;
+    border: 1px solid #747474;
+    color: #000;
+    border-radius: 4em;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.modal .sub-section .input-holder {
+    background-color: #EDF2F7;
+    border: 1px solid #CBD5E0;
+    border-radius: 0.3em;
+    margin: 1em 0;
+}
+
+.modal .sub-section .input-holder input {
+    border: 0;
+    padding: 0;
+    outline: none;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 1080px) {
+    .sub-section {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .card-holder .card-picture {
+        height: 200px;
+    }
+
+    .copyright-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright-footer ul {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .footer-holder {
+        gap: 2em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .card-holder {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-holder .card-picture {
+        height: 200px;
+    }
+
+    .footer-holder {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-holder .footer-item:last-child {
+        grid-column: span 2;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    #main .title-holder {
+        font-size: 1.8em;
+    }
+
+    .card-holder {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-holder {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+}
