@@ -125,17 +125,13 @@ body>section {
 
 .sub-section .title-holder {
     text-align: center;
+    text-transform: uppercase;
 }
 
 .sub-section .title-holder h2 {
     font-size: 1.6em;
     color: #000;
     letter-spacing: 0px;
-    text-transform: uppercase;
-}
-
-.sub-section .title-holder h4 {
-    margin-top: -0.5em;
 }
 
 .sub-section .description-holder {
@@ -143,6 +139,7 @@ body>section {
 }
 
 .card-holder {
+    margin-left: -130px;
     display: grid;
     gap: 1em;
     grid-template-columns: repeat(3, 1fr);
@@ -175,6 +172,11 @@ body>section {
 .card-holder .card-picture {
     height: 250px;
 }
+
+.card-holder .card-picture-2 {
+    margin-left: 17px;
+     height: 250px;
+ }
 
 .card-holder .card-information {
     text-align: center;
@@ -333,7 +335,7 @@ body>section {
     width: 100%;
     height: 100%;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     align-items: center;
     display: none;
 }
@@ -402,6 +404,62 @@ body>section {
     background-color: rgba(0, 0, 0, 0);
 }
 
+.input-component .checkbox-holder {
+    display: flex;
+    padding: 0.25em 0;
+}
+
+.input-component label {
+    font-size: 0.8em;
+    font-weight: 400;
+    margin-bottom: -1em;
+    display: block;
+}
+
+.modal .title-holder {
+    padding: 1em 0;
+    font-size: 1.2em;
+    margin-top: -0.5em;
+    position: relative;
+}
+
+.modal .footer-holder {
+    width: 100%;
+    grid-template-columns: none;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.modal .title-holder .btn-back {
+    position: absolute;
+    left: 0;
+    line-height: 0;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #D8DADC;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: -0.25em;
+}
+
+.modal .title-holder .btn-back img {
+    margin: 0;
+    padding: 0;
+}
+
+.modal .title-holder h4 {
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+    color: #588CD0;
+}
+
 @media screen and (max-width: 1080px) {
     .sub-section {
         padding-left: 1em;
@@ -463,56 +521,9 @@ body>section {
 
 
 }
-/* login */
 
-@import "bourbon";
 
-body {
-	background: #eee !important;	
+.text-center {
+     text-align: center;
 }
 
-.wrapper {	
-	margin-top: 80px;
-  margin-bottom: 80px;
-}
-
-.form-signin {
-  max-width: 380px;
-  padding: 15px 35px 45px;
-  margin: 0 auto;
-  background-color: #fff;
-  border: 1px solid rgba(0,0,0,0.1);  
-
-  .form-signin-heading,
-	.checkbox {
-	  margin-bottom: 30px;
-	}
-
-	.checkbox {
-	  font-weight: normal;
-	}
-
-	.form-control {
-	  position: relative;
-	  font-size: 16px;
-	  height: auto;
-	  padding: 10px;
-		@include box-sizing(border-box);
-
-		&:focus {
-		  z-index: 2;
-		}
-	}
-
-	input[type="text"] {
-	  margin-bottom: -1px;
-	  border-bottom-left-radius: 0;
-	  border-bottom-right-radius: 0;
-	}
-
-	input[type="password"] {
-	  margin-bottom: 20px;
-	  border-top-left-radius: 0;
-	  border-top-right-radius: 0;
-	}
-}
