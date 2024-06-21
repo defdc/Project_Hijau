@@ -52,6 +52,10 @@ function showModal(modalId) {
 
 }
 
+function linkTo(href) {
+    window.location.href = href;
+}
+
 function doRegister(event) {
 
     event.preventDefault();
@@ -190,4 +194,58 @@ function doLogin(event) {
         alert("An error occurred. Please try again later.");
     }
 
+}
+
+
+function selectNominal(nominal) {
+    document.getElementById('nominal').value = nominal;
+    document.getElementById('quantity').value = nominal;
+}
+
+function doDonate(event) {
+    event.preventDefault();
+
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('message').value;
+    const anonymous = document.getElementById('anonymous').checked;
+
+    const userData = JSON.parse(localStorage.getItem('auth_user'));
+    const email = userData.email;
+    const donationId = new Date().getTime();
+
+    const payload = {
+        id: donationId,
+        quantity,
+        name,
+        message,
+        anonymous,
+        email
+    };
+
+    try {
+        return window.firebase.databaseset(
+            window.firebase.databaseref(window.firebase.database, 'donations/' + donationId),
+            payload
+        ).then(() => {
+            showModal('payment');
+        });
+    } catch (error) {
+        console.error("Error storing donation:", error);
+        alert("Terjadi kesalahan. Silahkan coba lagi.");
+    }
+
+
+}
+
+function getDonations(callback) {
+    window.firebase.databaseget(window.firebase.databaseref(window.firebase.database, 'donations')).then((snapshot) => {
+        if (snapshot.exists()) {
+            const donations = snapshot.val();
+            const sortedDonations = Object.values(donations).sort((a, b) => b.id - a.id);
+            callback(sortedDonations);
+        } else {
+            callback([]);
+        }
+    });
 }

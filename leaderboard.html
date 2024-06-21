@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Hijau - Join the Movement!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyCLPviefkZDeg5vetxSFzk3vqvzPjjus3w",
+            authDomain: "college-project-ed19d.firebaseapp.com",
+            projectId: "college-project-ed19d",
+            storageBucket: "college-project-ed19d.appspot.com",
+            messagingSenderId: "562318025242",
+            appId: "1:562318025242:web:865623db51628f9e69e7a3",
+            databaseURL: "https://college-project-ed19d-default-rtdb.asia-southeast1.firebasedatabase.app/",
+        };
+        window.firebase = {};
+        window.firebase.app = initializeApp(firebaseConfig);
+        window.firebase.database = getDatabase(window.firebase.app);
+        window.firebase.databaseref = ref;
+        window.firebase.databaseset = set;
+        window.firebase.databaseget = get;
+    </script>
+
+    <script src="./scripts.js"></script>
+
+</head>
+
+<body>
+    <section id="main" class="flat">
+        <div class="blur">
+            <div class="logo-holder">
+                <img src="assets/logo.png" alt="Project Hijau">
+            </div>
+            <div class="header-holder">
+                <ul id="header">
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#footer">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Project</a>
+                    </li>
+                    <li>
+                        <a href="./board.html">Donation</a>
+                    </li>
+                    <li>
+                        <a href="#footer">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="title-holder">
+                <h1 style="position: relative; display: inline-block;">LEADERBOARDS <img src="./assets/icon-01.png"
+                        style="position: absolute; top: -30px; right: -30px; width: 50px;"><br />DONATIONS <img
+                        src="assets/icon-02.png" style="position: absolute; bottom: 0; width: 50px;"></h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="donations">
+        <img src="./assets/deer.png" alt="" srcset="">
+        <div class="sub-section">
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="sub-section">
+            <div class="footer-holder">
+                <div class="footer-item valign-center">
+                    <p>We are charity organization that help you to plant trees and save the environment. Join us and
+                        make the world</p>
+                </div>
+                <div class="footer-item">
+                    <div class="title-holder">Contact Us</div>
+                    <div class="information-holder">
+                        <span>Feel free to contact and reach us!!</span>
+                        <ul>
+                            <li>
+                                <div><img src="./assets/phone.png" alt="Phone"></div>
+                                <div>+6285212344321</div>
+                            </li>
+                            <li>
+                                <div><img src="./assets/mail.png" alt="Email"></div>
+                                <div>admin@projecthijau.com</div>
+                            </li>
+                            <li>
+                                <div><img src="./assets/location.png" alt="Address"></div>
+                                <div>Jl. KH. Syahdan, No.18, Jakarta Barat, DKI Jakarta</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <div class="information-holder">
+                        <span>Subscribe our newsletter for more update & news!!</span>
+                        <div class="contact-form">
+                            <div class="input-holder">
+                                <input type="text" placeholder="Enter your email">
+                            </div>
+                            <div class="button-holder">
+                                <button>Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-footer sub-section">
+            <div>© 2024 Project Hijau. All rights reserved</div>
+            <div>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>|</li>
+                    <li>Term & Condition</li>
+                    <li>|</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const template = `
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="./assets/tree.png">
+                    </div>
+                    <div class="card-quantity">
+                        <h1>{quantity}</h1>
+                        <small>Pohon</small>
+                    </div>
+                    <div class="card-item-title">{name}</div>
+                    <div class="card-item-description">{message}</div>
+                </div>
+            `;
+            getDonations((data) => {
+                for (let i = 0; i < data.length; i++) {
+                    const curr = `${template.replace('{quantity}', data[i].quantity).replace('{name}', data[i].anonymous ? 'Anonymous' : data[i].name).replace('{message}', data[i].message)}`;
+                    const container = document.querySelector('#donations .sub-section');
+                    container.insertAdjacentHTML('beforeend', curr);
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>

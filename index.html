@@ -52,7 +52,7 @@
             <div class="header-holder">
                 <ul id="header">
                     <li>
-                        <a href="#main">Home</a>
+                        <a href="./index.html">Home</a>
                     </li>
                     <li>
                         <a href="#about-us">About Us</a>
@@ -61,7 +61,7 @@
                         <a href="#projects">Project</a>
                     </li>
                     <li>
-                        <a href="#progress">Donation</a>
+                        <a href="./leaderboard.html">Donation</a>
                     </li>
                     <li>
                         <a href="#contact">Contact Us</a>
@@ -283,6 +283,7 @@
             </div>
         </div>
     </section>
+
     <section id="footer">
         <div class="sub-section">
             <div class="footer-holder">
@@ -351,13 +352,13 @@
                 <h4>1 pohon = 50.0000 rupiah</h4>
             </div>
             <div class="button-holder">
-                <button>5 pohon</button>
-                <button>10 pohon</button>
-                <button>100 pohon</button>
-                <button>150 pohon</button>
+                <button onclick="selectNominal(5)">5 pohon</button>
+                <button onclick="selectNominal(10)">10 pohon</button>
+                <button onclick="selectNominal(100)">100 pohon</button>
+                <button onclick="selectNominal(150)">150 pohon</button>
             </div>
             <div class="input-holder">
-                <input type="text" placeholder="Nominal Lainnya">
+                <input type="number" id="nominal" placeholder="Nominal Lainnya">
             </div>
             <hr>
             <div class="button-holder">
@@ -416,6 +417,23 @@
             </div>
             <div class="button-holder">
                 <button class="secondary-button" onclick="showModal('authentication-register')">Create Account</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal" data-name="payment">
+        <div class="sub-section">
+            <div class="title-holder">
+                <button class="btn-back" onclick="showModal('donate-detail')"><img
+                        src="./assets/chevron.left.png" /></button>
+                <h4>Payment</h4>
+            </div>
+            <div>
+                <img src="./assets/qris.png" alt="" srcset="" style="width: 100%; height: auto;">
+            </div>
+            <div class="footer-holder">Silahkan melakukan pembayaran dengan cara scan QR Code di atas</div>
+            <div class="button-holder">
+                <button class="secondary-button" onclick="linkTo('./leaderboard.html')">Selesai</button>
             </div>
         </div>
     </section>
